@@ -16,8 +16,8 @@ public interface StreamHasSubjectPaperService {
 	
 	List<StreamHasSubjectPaper> findAllStreamHasSubjectPapers();
 	
-	StreamHasSubjectPaper findStreamHasSubjectPaper(String streamId, String subject_paper_id);
+	StreamHasSubjectPaper findStreamHasSubjectPaper(int streamId, int subject_paper_id);
 	
-	boolean isStreamHasSubjectPaperIdUnique(Integer id, String streamId, String subject_paper_id);
+	boolean isStreamHasSubjectPaperIdUnique(Integer id, int streamId, int subject_paper_id);
 
 }

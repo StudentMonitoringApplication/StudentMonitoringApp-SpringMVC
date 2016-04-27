@@ -42,11 +42,11 @@ public class StreamHasSubjectPaperServiceImpl implements StreamHasSubjectPaperSe
 		return dao.findAllStreamHasSubjectPaper();
 	}
 
-	public StreamHasSubjectPaper findStreamHasSubjectPaper(String streamId, String subject_paper_id) {
+	public StreamHasSubjectPaper findStreamHasSubjectPaper(int streamId, int subject_paper_id) {
 		return dao.findStreamHasSubjectPaper(streamId, subject_paper_id);
 	}
 
-	public boolean isStreamHasSubjectPaperIdUnique(Integer id, String streamId, String subject_paper_id) {
+	public boolean isStreamHasSubjectPaperIdUnique(Integer id, int streamId, int subject_paper_id) {
 		StreamHasSubjectPaper streamHasSubjectPaper = findStreamHasSubjectPaper(streamId, subject_paper_id);
 		return ( streamHasSubjectPaper == null || ((id != null) && (streamHasSubjectPaper.getId() == id)));
 	}

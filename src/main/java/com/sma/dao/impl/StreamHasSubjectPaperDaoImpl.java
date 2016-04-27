@@ -34,7 +34,7 @@ public class StreamHasSubjectPaperDaoImpl extends AbstractDao<Integer, StreamHas
 		return (List<StreamHasSubjectPaper>) criteria.list();
 	}
 
-	public StreamHasSubjectPaper findStreamHasSubjectPaper(String streamId, String subject_paper_id) {
+	public StreamHasSubjectPaper findStreamHasSubjectPaper(int streamId, int subject_paper_id) {
 		Criteria criteria = createEntityCriteria();
 		criteria.add(Restrictions.eq("streamId", streamId));
 		criteria.add(Restrictions.eq("subject_paper_id", subject_paper_id));

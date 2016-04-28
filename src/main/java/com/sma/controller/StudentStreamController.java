@@ -72,7 +72,7 @@ public class StudentStreamController {
 		 * framework as well while still using internationalized messages.
 		 * 
 		 */
-		if(!service.isStudentStreamUnique(studentStream.getId(), studentStream.getStudent_id(), studentStream.getClass_id())){
+		if(!service.isStudentStreamUnique(studentStream.getId(), studentStream.getStudent_id(), studentStream.getStream_id())){
 			FieldError ssnError =new FieldError("studentStream","studentStreamId",messageSource.getMessage("non.unique.Id", new String[]{String.valueOf(studentStream.getId())}, Locale.getDefault()));
 		    result.addError(ssnError);
 			return "studentStreamRegistration";
@@ -89,8 +89,8 @@ public class StudentStreamController {
 	 * This method will provide the medium to update an existing employee.
 	 */
 	@RequestMapping(value = { "/edit-{studentStreamId}-studentStream" }, method = RequestMethod.GET)
-	public String editStudentStream(@PathVariable int student_id, int class_id, ModelMap model) {
-		StudentStream studentStream1 = service.findStudentStream(student_id, class_id);
+	public String editStudentStream(@PathVariable int student_id, int stream_id, ModelMap model) {
+		StudentStream studentStream1 = service.findStudentStream(student_id, stream_id);
 		model.addAttribute("studentStream", studentStream1);
 		model.addAttribute("edit", true);
 		return "studentStreamRegistration";
@@ -108,7 +108,7 @@ public class StudentStreamController {
 			return "studentStreamRegistration";
 		}
 
-		if(!service.isStudentStreamUnique(studentStream.getId(), studentStream.getStudent_id(), studentStream.getClass_id())){
+		if(!service.isStudentStreamUnique(studentStream.getId(), studentStream.getStudent_id(), studentStream.getStream_id())){
 			FieldError ssnError =new FieldError("studentStream","studentStreamId",messageSource.getMessage("non.unique.Id", new String[]{String.valueOf(studentStream.getId())}, Locale.getDefault()));
 		    result.addError(ssnError);
 			return "studentStreamRegistration";

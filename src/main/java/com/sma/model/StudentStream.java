@@ -23,8 +23,8 @@ public class StudentStream {
     
     @NotNull
 	@Digits(integer=4, fraction = 0)
-	@Column(name = "CLASS_ID", nullable = false)
-    private int class_id;
+	@Column(name = "STREAM_ID", nullable = false)
+    private int stream_id;
     
     public int getId() {
 		return id;
@@ -42,12 +42,12 @@ public class StudentStream {
 		this.student_id = student_id;
 	}
 
-	public int getClass_id() {
-		return class_id;
+	public int getStream_id() {
+		return stream_id;
 	}
 
-	public void setClass_id(int class_id) {
-		this.class_id = class_id;
+	public void setStream_id(int stream_id) {
+		this.stream_id = stream_id;
 	}
 
 	@Override
@@ -74,7 +74,7 @@ public class StudentStream {
     
     @Override
 	public String toString() {
-        return "student_in_class [student_id=" + student_id + ", class_id=" + class_id + "]";
+        return "student_in_class [student_id=" + student_id + ", stream_id=" + stream_id + "]";
        
 	}
 }

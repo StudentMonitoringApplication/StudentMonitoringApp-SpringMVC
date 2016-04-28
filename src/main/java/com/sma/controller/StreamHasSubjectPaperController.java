@@ -72,7 +72,7 @@ public class StreamHasSubjectPaperController {
 		 * framework as well while still using internationalized messages.
 		 **/ 
 		 
-		if(!service.isStreamHasSubjectPaperIdUnique(streamHasSubjectPaper.getId(), streamHasSubjectPaper.getStreamId(), streamHasSubjectPaper.getSubject_paper_id())){
+		if(!service.isStreamHasSubjectPaperIdUnique(streamHasSubjectPaper.getId(), streamHasSubjectPaper.getStream_id(), streamHasSubjectPaper.getSubject_paper_id())){
 			FieldError ssnError =new FieldError("StreamHasSubjectPaper","id",messageSource.getMessage("non.unique.id", new String[]{String.valueOf(streamHasSubjectPaper.getId())}, Locale.getDefault()));
 		    result.addError(ssnError);
 			return "StreamHasSubjectPaperRegistration";
@@ -108,7 +108,7 @@ public class StreamHasSubjectPaperController {
 			return "streamHasSubjectPaperRegistration";
 		}
 
-		if(!service.isStreamHasSubjectPaperIdUnique(streamHasSubjectPaper.getId(), streamHasSubjectPaper.getStreamId(), streamHasSubjectPaper.getSubject_paper_id())){
+		if(!service.isStreamHasSubjectPaperIdUnique(streamHasSubjectPaper.getId(), streamHasSubjectPaper.getStream_id(), streamHasSubjectPaper.getSubject_paper_id())){
 			FieldError ssnError =new FieldError("StreamHasSubjectPaper","id",messageSource.getMessage("non.unique.id", new String[]{String.valueOf(streamHasSubjectPaper.getId())}, Locale.getDefault()));
 		    result.addError(ssnError);
 			return "StreamHasSubjectPaperRegistration";

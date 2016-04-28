@@ -15,7 +15,7 @@ import org.joda.time.LocalDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="CLASS")
+@Table(name="STREAM")
 public class Stream {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

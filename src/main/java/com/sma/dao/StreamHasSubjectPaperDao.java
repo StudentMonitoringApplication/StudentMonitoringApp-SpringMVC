@@ -14,5 +14,5 @@ public interface StreamHasSubjectPaperDao {
 	
 	List<StreamHasSubjectPaper> findAllStreamHasSubjectPaper();
 	
-	StreamHasSubjectPaper findStreamHasSubjectPaper(int streamId, int subject_paper_id);
+	StreamHasSubjectPaper findStreamHasSubjectPaper(int stream_id, int subject_paper_id);
 }

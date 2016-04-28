@@ -49,8 +49,8 @@ public class Student {
     
     @NotNull
 	@Digits(integer=4, fraction = 0)
-	@Column(name = "CLASS_ID", nullable = false)
-    private int class_id;
+	@Column(name = "STREAM_ID", nullable = false)
+    private int stream_id;
     
       
     public int getId() {
@@ -117,12 +117,12 @@ public class Student {
 		this.parent_phone_number = parent_phone_number;
 	}
 
-	public int getClass_id() {
-		return class_id;
+	public int getStream_id() {
+		return stream_id;
 	}
 
-	public void setClass_id(int class_id) {
-		this.class_id = class_id;
+	public void setStream_id(int stream_id) {
+		this.stream_id = stream_id;
 	}
 
 	@Override
@@ -157,7 +157,7 @@ public class Student {
 	public String toString() {
         return "student [student_id=" + student_id + ", student_first_name=" + student_first_name + ", student_last_name="
 				+ student_last_name + ", parent_first_name=" + parent_first_name + ", parent_last_name="
-                + parent_last_name + ", parent_email=" + parent_email + ", parent_phone_number=" + parent_phone_number + ", class_id=" 
-                + class_id + "]";   
+                + parent_last_name + ", parent_email=" + parent_email + ", parent_phone_number=" + parent_phone_number + ", stream_id=" 
+                + stream_id + "]";   
 	}
 }

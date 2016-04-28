@@ -35,7 +35,7 @@ public class StudentServiceImpl implements StudentService{
 			entity.setParent_first_name(student.getParent_first_name());
 			entity.setParent_email(student.getParent_email());
 			entity.setParent_phone_number(student.getParent_phone_number());
-			entity.setClass_id(student.getClass_id());
+			entity.setStream_id(student.getStream_id());
 		}
 	}
 

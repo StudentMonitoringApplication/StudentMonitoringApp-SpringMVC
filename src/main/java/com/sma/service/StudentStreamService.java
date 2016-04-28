@@ -16,7 +16,7 @@ public interface StudentStreamService {
 
 	List<StudentStream> findAllStudentStreams(); 
 	
-	StudentStream findStudentStream(int student_id, int class_id);
+	StudentStream findStudentStream(int student_id, int stream_id);
 	
-	boolean isStudentStreamUnique(Integer id, int student_id, int class_id);
+	boolean isStudentStreamUnique(Integer id, int student_id, int stream_id);
 }

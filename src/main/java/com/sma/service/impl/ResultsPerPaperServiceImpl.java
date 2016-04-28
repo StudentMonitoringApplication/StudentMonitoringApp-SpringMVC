@@ -28,7 +28,7 @@ public class ResultsPerPaperServiceImpl implements ResultsPerPaperService{
 	public void updateResultsPerPaper(ResultsPerPaper resultsPerPaper) {
 		ResultsPerPaper entity = dao.findById(resultsPerPaper.getId());
 		if(entity!=null){
-			entity.setClass_id(resultsPerPaper.getClass_id());
+			entity.setStream_id(resultsPerPaper.getStream_id());
 			entity.setDate(resultsPerPaper.getDate());
 			entity.setMarks(resultsPerPaper.getMarks());
 			entity.setStudent_id(resultsPerPaper.getStudent_id());

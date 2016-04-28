@@ -27,10 +27,10 @@ public class StudentStreamServiceImpl implements StudentStreamService {
 	}
 
 	public void updateStudentStream(StudentStream studentStream) {
-		StudentStream entity = dao.findById(studentStream.getClass_id());
+		StudentStream entity = dao.findById(studentStream.getStream_id());
 		if(entity!=null){
 			entity.setStudent_id(studentStream.getStudent_id());
-			entity.setClass_id(studentStream.getClass_id());
+			entity.setStream_id(studentStream.getStream_id());
 		}
 		
 	}
@@ -44,12 +44,12 @@ public class StudentStreamServiceImpl implements StudentStreamService {
 		return dao.findAllStudentStreams();
 	}
 
-	public StudentStream findStudentStream(int student_id, int class_id) {
-		return dao.findStudentStream(student_id, class_id);
+	public StudentStream findStudentStream(int student_id, int stream_id) {
+		return dao.findStudentStream(student_id, stream_id);
 	}
 
-	public boolean isStudentStreamUnique(Integer id, int student_id, int class_id) {
-		StudentStream studentStream = findStudentStream(student_id, class_id);
+	public boolean isStudentStreamUnique(Integer id, int student_id, int stream_id) {
+		StudentStream studentStream = findStudentStream(student_id, stream_id);
 		return (studentStream == null || ((id!= null) && (studentStream.getId() == id )));
 	}
 

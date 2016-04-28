@@ -5,7 +5,6 @@ import java.util.Locale;
 
 import javax.validation.Valid;
 
-import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;

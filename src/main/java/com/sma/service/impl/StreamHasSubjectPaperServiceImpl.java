@@ -28,7 +28,7 @@ public class StreamHasSubjectPaperServiceImpl implements StreamHasSubjectPaperSe
 	public void updateStreamHasSubjectPaper(StreamHasSubjectPaper streamHasSubjectPaper) {
 		StreamHasSubjectPaper entity = dao.findById(streamHasSubjectPaper.getId());
 		if(entity!=null){
-			entity.setStreamId(streamHasSubjectPaper.getStreamId());
+			entity.setStream_id(streamHasSubjectPaper.getStream_id());
 			entity.setSubject_paper_id(streamHasSubjectPaper.getSubject_paper_id());
 			entity.setTeacher_id(streamHasSubjectPaper.getTeacher_id());
 		}
@@ -42,12 +42,12 @@ public class StreamHasSubjectPaperServiceImpl implements StreamHasSubjectPaperSe
 		return dao.findAllStreamHasSubjectPaper();
 	}
 
-	public StreamHasSubjectPaper findStreamHasSubjectPaper(int streamId, int subject_paper_id) {
-		return dao.findStreamHasSubjectPaper(streamId, subject_paper_id);
+	public StreamHasSubjectPaper findStreamHasSubjectPaper(int stream_id, int subject_paper_id) {
+		return dao.findStreamHasSubjectPaper(stream_id, subject_paper_id);
 	}
 
-	public boolean isStreamHasSubjectPaperIdUnique(Integer id, int streamId, int subject_paper_id) {
-		StreamHasSubjectPaper streamHasSubjectPaper = findStreamHasSubjectPaper(streamId, subject_paper_id);
+	public boolean isStreamHasSubjectPaperIdUnique(Integer id, int stream_id, int subject_paper_id) {
+		StreamHasSubjectPaper streamHasSubjectPaper = findStreamHasSubjectPaper(stream_id, subject_paper_id);
 		return ( streamHasSubjectPaper == null || ((id != null) && (streamHasSubjectPaper.getId() == id)));
 	}
 

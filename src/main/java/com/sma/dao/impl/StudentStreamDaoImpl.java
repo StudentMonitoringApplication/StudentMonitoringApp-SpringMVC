@@ -34,9 +34,9 @@ public class StudentStreamDaoImpl extends AbstractDao<Integer, StudentStream> im
 		return (List<StudentStream>) criteria.list();
 	}
 
-	public StudentStream findStudentStream(int student_id, int class_id) {
+	public StudentStream findStudentStream(int student_id, int stream_id) {
 		Criteria criteria = createEntityCriteria();
-		criteria.add(Restrictions.eq("class_id", class_id));
+		criteria.add(Restrictions.eq("stream_id", stream_id));
 		criteria.add(Restrictions.eq("student_id", student_id));
 		return (StudentStream) criteria.uniqueResult();
 	}

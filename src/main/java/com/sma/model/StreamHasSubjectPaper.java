@@ -19,8 +19,8 @@ public class StreamHasSubjectPaper {
     
     @NotNull
 	@Digits(integer=4, fraction = 0)
-	@Column(name = "CLASS_ID", nullable = false)
-	private int streamId;
+	@Column(name = "STREAM_ID", nullable = false)
+	private int stream_id;
     
     @NotNull
 	@Digits(integer=4, fraction = 0)
@@ -41,12 +41,12 @@ public class StreamHasSubjectPaper {
 		this.id = id;
 	}
 
-	public int getStreamId() {
-		return streamId;
+	public int getStream_id() {
+		return stream_id;
 	}
 
-	public void setStreamId(int streamId) {
-		this.streamId = streamId;
+	public void setStream_id(int stream_id) {
+		this.stream_id = stream_id;
 	}
 
 	public int getSubject_paper_id() {
@@ -89,6 +89,6 @@ public class StreamHasSubjectPaper {
     
     @Override
 	public String toString() {
-        return "class_has_subject_paper [class_id=" + streamId + ", subject_paper_id=" + subject_paper_id + ", teacher_id=" + teacher_id + "]";        
+        return "class_has_subject_paper [stream_id=" + stream_id + ", subject_paper_id=" + subject_paper_id + ", teacher_id=" + teacher_id + "]";        
 	}
 }

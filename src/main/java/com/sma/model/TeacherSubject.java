@@ -26,6 +26,11 @@ public class TeacherSubject {
 	@Column(name = "SUBJECT_ID", nullable = false)
     private int subject_id;
     
+    @NotNull
+	@Digits(integer=4, fraction = 0)
+	@Column(name = "STREAM_ID", nullable = false)
+    private int stream_id;
+    
     
     public int getId() {
 		return id;
@@ -49,6 +54,14 @@ public class TeacherSubject {
 
 	public void setSubject_id(int subject_id) {
 		this.subject_id = subject_id;
+	}
+
+	public int getStream_id() {
+		return stream_id;
+	}
+
+	public void setStream_id(int stream_id) {
+		this.stream_id = stream_id;
 	}
 
 	@Override
@@ -75,7 +88,8 @@ public class TeacherSubject {
     
     @Override
 	public String toString() {
-        return "teacher_has_subject [teacher_id=" + teacher_id + ", subject_id=" + subject_id + "]";
+        return "teacher_has_subject [teacher_id=" + teacher_id + ", subject_id=" + subject_id + 
+        		", stream_id=" + stream_id +"]";
       
 	}
 }

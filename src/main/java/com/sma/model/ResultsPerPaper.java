@@ -37,8 +37,8 @@ public class ResultsPerPaper {
     
     @NotNull
 	@Digits(integer=4, fraction = 0)
-	@Column(name = "CLASS_ID", nullable = false)
-    private int class_id;
+	@Column(name = "STREAM_ID", nullable = false)
+    private int stream_id;
     
     @NotNull
 	@Digits(integer=4, fraction = 0)
@@ -84,12 +84,12 @@ public class ResultsPerPaper {
 		this.student_id = student_id;
 	}
 
-	public int getClass_id() {
-		return class_id;
+	public int getStream_id() {
+		return stream_id;
 	}
 
-	public void setClass_id(int class_id) {
-		this.class_id = class_id;
+	public void setStream_id(int stream_id) {
+		this.stream_id = stream_id;
 	}
 
 	public int getSubject_paper_id() {
@@ -133,7 +133,7 @@ public class ResultsPerPaper {
     @Override
 	public String toString() {
         return "results_per_paper [date=" + date + ", marks=" + marks + ", student_id="
-				+ student_id + ", class_id=" + class_id + ", subject_paper_id=" + subject_paper_id + ", test_id=" + test_id + "]";
+				+ student_id + ", stream_id=" + stream_id + ", subject_paper_id=" + subject_paper_id + ", test_id=" + test_id + "]";
         
 	}
 }

@@ -28,7 +28,7 @@ public class SubjectResultsServiceImpl implements SubjectResultsService {
 	public void updateSubjectResults(SubjectResults subjectResults) {
 		SubjectResults entity = dao.findById(subjectResults.getId());
 		if(entity!=null){
-			entity.setClass_id(subjectResults.getClass_id());
+			entity.setStream_id(subjectResults.getStream_id());
 			entity.setDate(subjectResults.getDate());
 			entity.setMarks(subjectResults.getMarks());
 			entity.setStudent_id(subjectResults.getStudent_id());
